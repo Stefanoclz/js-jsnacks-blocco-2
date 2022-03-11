@@ -43,11 +43,18 @@ let risultato = document.getElementById('risultato');
 let i = 0;
 
 while (i < 5) {
+
+
     let number = parseInt(prompt('Inserisci un numero'));
 
-    i++
+    if (!isNaN(number)) {
+        i++
 
-    sum += number;
+        sum += number;
+    } else {
+        alert('ERRORE! Inserisci un numero non lettere!');
+        i = 0;
+    }
 }
 
 console.log(sum);
